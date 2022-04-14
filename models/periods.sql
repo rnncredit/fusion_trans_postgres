@@ -1,5 +1,5 @@
 {{ config(materialized='table',
-		  post_hook='delete from {{this}} where 1=1 and period_num=1') }}
+		  post_hook='delete from {{this}}{{ ''_PK'' | as_text }} where 1=1 and period_num=1') }}
 
 with __dbt__cte__gl_periods_ab1 as (
 
