@@ -1,5 +1,5 @@
 {{ config(materialized='table',
-		  post_hook='delete from {{this}} where 1=1 and rownum<5') }}
+		  post_hook='delete from {{this}} limit 2') }}
 
 with __dbt__cte__gl_periods_ab1 as (
 
