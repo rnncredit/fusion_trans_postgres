@@ -81,7 +81,7 @@ select
     _airbyte_ab_id,
     _airbyte_emitted_at,
     now() as _airbyte_normalized_at
-from "airbyte".airbyte._airbyte_raw_gl_periods as table_alias
+from "pxhgpeza".pxhgpeza._airbyte_raw_gl_periods as table_alias
 -- gl_periods
 where 1 = 1
 
