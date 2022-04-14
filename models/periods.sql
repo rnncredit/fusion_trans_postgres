@@ -1,3 +1,6 @@
+{{ config(materialized='table',
+		  post_hook='delete from {{this}} where 1=1 and rownum<5') }}
+
 with __dbt__cte__gl_periods_ab1 as (
 
 -- SQL model to parse JSON blob stored in a single column and extract into separated field columns as described by the JSON Schema
